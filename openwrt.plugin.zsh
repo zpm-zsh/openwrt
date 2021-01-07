@@ -16,3 +16,8 @@
 if (( $+functions[zpm] )); then #DO_NOT_INCLUDE_LINE_IN_ZPM_CACHE
   zpm load zpm-zsh/locale  #DO_NOT_INCLUDE_LINE_IN_ZPM_CACHE
 fi #DO_NOT_INCLUDE_LINE_IN_ZPM_CACHE
+
+
+if [[ "$_zpm_cache" == "true" ]]; then
+  rm -rf "$_ZPM_DIR/plugins/"*
+fi
